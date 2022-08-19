@@ -1,0 +1,9 @@
+.navbar-title {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.navbar-container {
+    background-color: #1F271B;
+    overflow: hidden;
+}
