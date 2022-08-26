@@ -13,7 +13,8 @@ import {
   DropdownItem,
   NavbarText,
 } from "reactstrap";
-import './Navbar.css';
+import "./Navbar.css";
+import logo from "../assets/mosbius designs.png";
 
 function NavbarComponent(args) {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,14 @@ function NavbarComponent(args) {
   return (
     <div>
       <Navbar className="navbar-container" {...args}>
-        <NavbarBrand className="navbar-title" href="/">Mosbius Designs</NavbarBrand>
+        <NavbarBrand className="" href="/">
+          <div className="navbar-icons">
+          <div className="navbar-logo">
+            <img className="navbar-img" src={logo}></img>
+          </div>
+          <div className="navbar-title">Mosbius Designs</div>
+          </div>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
