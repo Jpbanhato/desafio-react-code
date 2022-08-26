@@ -5,10 +5,10 @@ function Section(props) {
   return (
     <section
       className={props.name + " main"}
-      style={
-        ({ backgroundImage: "url(" + props.url + ")" },
-        { flexDirection: props.reverse ? "row-reverse" : "row" })
-      }
+      style={{
+        backgroundImage: "url(" + props.url + ")",
+        flexDirection: props.reverse ? "row-reverse" : "row",
+      }}
     >
       <div
         className={props.name + "-left" + " main-left"}

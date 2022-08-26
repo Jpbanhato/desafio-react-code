@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./App.css";
-import logo from "../assets/mosbius designs.png";
 import img1 from "../assets/Scaffold-rafiki.svg";
 import img2 from "../assets/Architect-amico.svg";
 import Section from "../components/Section";
@@ -9,23 +8,23 @@ import Section from "../components/Section";
 export function App() {
   const info = [
     {
-    name: "main",
-    title: "Consultoria Estratégica para alavancar o seu negócio",
-    text: "Somos uma empresa formada por alunos da graduação da UFJF, que oferece projetos de consultoria personalizados, de acordo com a demanda de cada cliente, prezando pela construção conjunta de conhecimento e pela qualidade técnica.",
-    img:img1,
-    url: "https://images.pexels.com/photos/7587857/pexels-photo-7587857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    color: "blueviolet",
-    reverse: false
+      name: "main",
+      title: "Consultoria Estratégica para alavancar o seu negócio",
+      text: "Somos uma empresa formada por alunos da graduação da UFJF, que oferece projetos de consultoria personalizados, de acordo com a demanda de cada cliente, prezando pela construção conjunta de conhecimento e pela qualidade técnica.",
+      img: img1,
+      url: "https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      color: "blueviolet",
+      reverse: false,
     },
     {
       name: "info",
       title: "Sobre Nós",
       text: "Somos uma consultoria estratégica composta por alunos de todos os cursos de graduação da UFJF e que busca auxiliar pequenas e médias empresas a crescer, causando impacto positivo na sociedade. Somos uma empresa que sonha alto: queremos transformar a realidade de nossos clientes com nossos projetos, entregando resultados seniores, sem perder a vontade e brilho no olho júnior. Com o auxílio de nossos parceiros, como a Bain Company, Boston Consulting Group, ZX Ventures, entre outros, e de professores renomados da Fundação Getúlio Vargas, entregamos soluções completas e personalizadas para todas as dores dos nossos clientes. Fazemos parte do Núcleo da Mata e pretendemos expandir cada  vez mais nossa empresa!",
-      img:img2,
+      img: img2,
       url: "https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       color: "green",
-      reverse: true
-      }
+      reverse: true,
+    }
   ];
 
   return (
@@ -56,6 +55,7 @@ export function App() {
           <h4>Entre em contato conosco</h4>
           Nome:<input></input>
           Email:<input></input>
+          <button>Enviar</button>
         </section>
         <div className="footer">
           <h3>Footer</h3>
