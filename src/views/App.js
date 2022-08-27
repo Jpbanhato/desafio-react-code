@@ -5,6 +5,7 @@ import img1 from "../assets/Scaffold-rafiki.svg";
 import img2 from "../assets/Architect-amico.svg";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
+import ScrollButton from "../components/ScrollButton";
 import "../components/Contact.scss";
 
 export function App() {
@@ -31,6 +32,7 @@ export function App() {
 
   return (
     <>
+      <ScrollButton />
       <div className="App">
         <div className="navbar-top">
           <Navbar dark></Navbar>
@@ -56,10 +58,7 @@ export function App() {
         <div className="div-contato">
           <Contact></Contact>
         </div>
-        <div className="footer">
-          <h3>Footer</h3>
-          {/* <Footer></Footer> */}
-        </div>
+        <Footer></Footer>
       </div>
     </>
   );

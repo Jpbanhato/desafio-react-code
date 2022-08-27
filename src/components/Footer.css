@@ -1,0 +1,15 @@
+.footer {
+  color: aliceblue;
+  margin-top: auto;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  text-align: center;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+}
+.footer-text {
+    font-size: 0.8rem;
+    color: aliceblue;
+}
