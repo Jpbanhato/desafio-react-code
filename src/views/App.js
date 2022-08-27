@@ -4,6 +4,8 @@ import "./App.css";
 import img1 from "../assets/Scaffold-rafiki.svg";
 import img2 from "../assets/Architect-amico.svg";
 import Section from "../components/Section";
+import Contact from "../components/Contact";
+import "../components/Contact.scss";
 
 export function App() {
   const info = [
@@ -24,7 +26,7 @@ export function App() {
       url: "https://images.pexels.com/photos/1829191/pexels-photo-1829191.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
       color: "green",
       reverse: true,
-    }
+    },
   ];
 
   return (
@@ -51,12 +53,9 @@ export function App() {
           color={info[1].color}
           reverse={info[1].reverse}
         ></Section>
-        <section className="contact">
-          <h4>Entre em contato conosco</h4>
-          Nome:<input></input>
-          Email:<input></input>
-          <button>Enviar</button>
-        </section>
+        <div className="div-contato">
+          <Contact></Contact>
+        </div>
         <div className="footer">
           <h3>Footer</h3>
           {/* <Footer></Footer> */}

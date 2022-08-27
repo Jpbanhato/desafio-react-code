@@ -15,7 +15,7 @@ function Section(props) {
         style={{ backgroundColor: props.color }}
       >
         <h1 className={props.name + "-title" + " main-title"}>{props.title}</h1>
-        <p className={props.name + "-text" + " main-text"}>{props.text}</p>
+        <p className={props.name + "-text" + " main-text"} style={{ color: 'rgb(216, 216, 216)' }}>{props.text}</p>
       </div>
       <div className={props.name + "-right" + " main-right"}>
         <img
