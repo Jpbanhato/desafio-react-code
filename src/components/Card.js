@@ -7,24 +7,34 @@ import {
   ListGroupItem,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Card.css";
 
-function CardComponent({key, nome, email, departamentos, cargo, aniversario}) {
+function CardComponent({
+  nome,
+  email,
+  departamentos,
+  cargo,
+  aniversario,
+}) {
   return (
     <Card
-      style={
-        {
-          width: "18rem",
-        }
-      }
+      style={{
+        width: "18rem",
+      }}
     >
       <CardBody>
-        <CardTitle tag="h5">{ nome }</CardTitle>
+        <CardTitle tag="h5">{nome}</CardTitle>
       </CardBody>
       <ListGroup flush>
-        <ListGroupItem>{ email }</ListGroupItem>
-        <ListGroupItem>{ departamentos }</ListGroupItem>
-        <ListGroupItem>{ cargo }</ListGroupItem>
-        <ListGroupItem>{ aniversario }</ListGroupItem>
+        <ListGroupItem>Email: {email}</ListGroupItem>
+        <ListGroupItem>
+          Depatamento(s): 
+          {departamentos.map((departamento) => (
+            <span>{departamento}</span>
+          ))}
+        </ListGroupItem>
+        <ListGroupItem>Cargo: {cargo}</ListGroupItem>
+        <ListGroupItem>Aniversario: {aniversario}</ListGroupItem>
       </ListGroup>
     </Card>
   );

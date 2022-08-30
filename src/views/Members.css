@@ -1,10 +1,6 @@
 body {
   background-color: rgb(6, 34, 51);
   color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 .container-card {
@@ -32,12 +28,18 @@ body {
   -webkit-box-shadow: 0px 14px 23px 8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 14px 23px 8px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 14px 23px 8px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgb(0, 74, 74);
+  transition: all 0.3s ease-in-out;
 }
 .section-title {
   font-size: 2rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  background-color: rgb(0, 74, 74);
+  /* background-color: rgb(0, 74, 74); */
   padding: 1rem 0rem;
 }
 @media (max-width: 600px) {
