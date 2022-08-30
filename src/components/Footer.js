@@ -1,5 +1,5 @@
-import "./Footer.css";
 import logo from "../assets/mosbius designs.png";
+import "./Footer.css";
 
 export default function Footer() {
   return (

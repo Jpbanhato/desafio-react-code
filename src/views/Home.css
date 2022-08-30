@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(6, 34, 51) !important;
+    height: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  h3,
+  h4 {
+    overflow: hidden;
+    display: block;
+  }
+  .div-contato {
+    padding: 2rem;
+    margin: 5rem 1rem 5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid aquamarine;
+    overflow: hidden;
+  }

@@ -5,6 +5,7 @@ import {
   faFacebookSquare,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import "../components/Contact.scss";
 
 function Contact() {
   return (

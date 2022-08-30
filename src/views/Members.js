@@ -1,19 +1,29 @@
-import "./Members.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
-import { members } from "../members.json";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import "./Members.css";
 
-export function Members() {
+function Members() {
+  const [members, setMembers] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/members")
+      .then((response) => response.json())
+      .then((data) => {
+        setMembers(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <>
-      <Navbar />
       <div className="content">
         <h1 className="section-title">Membros:</h1>
         <div className="container-card">
           {members.map((member) => (
             <Card
+              key={member.id}
               nome={member.name}
               email={member.email}
               departamentos={member.departamentos}
@@ -23,7 +33,8 @@ export function Members() {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 }
+
+export default Members;

@@ -26,10 +26,10 @@ function NavbarComponent(args) {
       <Navbar className="navbar-container" {...args}>
         <NavbarBrand className="" href="/">
           <div className="navbar-icons">
-          <div className="navbar-logo">
-            <img className="navbar-img" src={logo}></img>
-          </div>
-          <div className="navbar-title">Mosbius Designs</div>
+            <div className="navbar-logo">
+              <img className="navbar-img" src={logo}></img>
+            </div>
+            <div className="navbar-title"><NavLink href="/">Mosbius Designs</NavLink></div>
           </div>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
