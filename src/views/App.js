@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Login from "./Login";
 import Home from "./Home";
 import Members from "./Members";
 import ScrollButton from "../components/ScrollButton";
@@ -19,6 +20,7 @@ export function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/members" element={<Members />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </div>

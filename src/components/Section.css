@@ -12,6 +12,11 @@
   -webkit-box-shadow: 0px 14px 23px 8px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 14px 23px 8px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 14px 23px 8px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease-in-out;
+}
+.main-left:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
 }
 .main-right {
   padding: 0% 5%;

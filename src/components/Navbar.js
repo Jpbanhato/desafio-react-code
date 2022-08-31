@@ -36,7 +36,7 @@ function NavbarComponent(args) {
               <NavLink href="/members">Membros</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">Login</NavLink>
+              <NavLink href="/login">Login</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

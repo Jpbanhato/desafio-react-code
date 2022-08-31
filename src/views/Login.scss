@@ -1,0 +1,99 @@
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+.Auth-form {
+  background-color: rgb(32, 32, 32) !important;
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: whitesmoke;
+  font-weight: 800;
+}
+
+.label-class {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+input[type="text"],
+input[type="email"],
+textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid aquamarine;
+}
+
+.form-group-login {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 0 1 100%;
+
+  label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+  }
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    // background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+    &:focus {
+      border: none;
+      outline: none;
+      border-bottom: 2px solid aquamarine;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Auth-form-content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .Auth-form-container {
+    width: auto;
+  }
+}

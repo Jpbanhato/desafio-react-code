@@ -5,6 +5,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import "../components/Contact.scss";
+import Button from "./Button";
 
 function Contact() {
   return (
@@ -31,26 +32,26 @@ function Contact() {
             </div>
           </div>
         </div>
-        <form>
+        <form className="form-contact">
           <div className="col personal-info">
-            <div className="form-group">
+            <div className="form-group-contact">
               <label>Nome</label>
               <input type="text" />
             </div>
-            <div className="form-group">
+            <div className="form-group-contact">
               <label>Email</label>
               <input type="email" />
             </div>
           </div>
           <div className="col">
-            <div className="form-group solo">
+            <div className="form-group-contact solo">
               <label>Mensagem</label>
               <textarea></textarea>
             </div>
           </div>
           <div className="col">
-            <div className="form-group right">
-              <button className="primary">Send</button>
+            <div className="form-group-contact right">
+              <Button />
             </div>
           </div>
         </form>
