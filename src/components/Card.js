@@ -9,13 +9,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Card.css";
 
-function CardComponent({
-  nome,
-  email,
-  departamentos,
-  cargo,
-  aniversario,
-}) {
+function CardComponent({ nome, email, departamentos, cargo, aniversario }) {
   return (
     <Card
       style={{
@@ -28,7 +22,7 @@ function CardComponent({
       <ListGroup flush>
         <ListGroupItem>Email: {email}</ListGroupItem>
         <ListGroupItem>
-          Depatamento(s): 
+          Depatamento(s):
           {departamentos.map((departamento) => (
             <span>{departamento}</span>
           ))}
@@ -39,5 +33,13 @@ function CardComponent({
     </Card>
   );
 }
+
+// CardComponent.propTypes = {
+//   nome: PropTypes.string.isRequired,
+//   email: React.PropTypes.string.isRequired,
+//   departamentos: React.PropTypes.array.isRequired,
+//   cargo: React.PropTypes.string.isRequired,
+//   aniversario: React.PropTypes.string.isRequired,
+// };
 
 export default CardComponent;

@@ -3,8 +3,14 @@ import img2 from "../assets/Architect-amico.svg";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
 import "./Home.css";
+import { useEffect } from "react";
 
 function Home() {
+
+  useEffect(() => {
+    document.title = "Mosbius Designs - Home";
+  }, []);
+
   const info = [
     {
       name: "main",

@@ -3,6 +3,11 @@ import Card from "../components/Card";
 import "./Members.css";
 
 function Members() {
+
+  useEffect(() => {
+    document.title = "Membros";
+  }, []);
+
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
