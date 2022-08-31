@@ -6,12 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
+  NavLink
 } from "reactstrap";
 import "./Navbar.css";
 import logo from "../assets/mosbius designs.png";
@@ -27,9 +22,11 @@ function NavbarComponent(args) {
         <NavbarBrand className="" href="/">
           <div className="navbar-icons">
             <div className="navbar-logo">
-              <img className="navbar-img" src={logo}></img>
+              <img className="navbar-img" alt="logo" src={logo}></img>
             </div>
-            <div className="navbar-title"><NavLink href="/">Mosbius Designs</NavLink></div>
+            <div className="navbar-title">
+              <NavLink href="/">Mosbius Designs</NavLink>
+            </div>
           </div>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -39,9 +36,7 @@ function NavbarComponent(args) {
               <NavLink href="/members">Membros</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                Login
-              </NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Login</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

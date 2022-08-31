@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookSquare,
@@ -19,13 +18,13 @@ function Contact() {
           <p>Preencha e envie</p>
           <div className="row links-container">
             <div className="icon-text">
-              <a href="#">
+              <a href="instagram.com">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <span>mosbiusdesigns</span>
             </div>
             <div className="icon-text">
-              <a href="#">
+              <a href="facebook.com">
                 <FontAwesomeIcon icon={faFacebookSquare} />
               </a>
               <span>@mosbiusdesigns</span>

@@ -2,7 +2,6 @@ import img1 from "../assets/Scaffold-rafiki.svg";
 import img2 from "../assets/Architect-amico.svg";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
-import ScrollButton from "../components/ScrollButton";
 import "./Home.css";
 
 function Home() {
@@ -29,7 +28,6 @@ function Home() {
 
   return (
     <>
-      <ScrollButton />
       <div className="Home">
         <Section
           name={info[0].name}
