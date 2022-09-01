@@ -6,7 +6,7 @@ function Button(props) {
       <div className="form-group-contact right">
         <button
           style={{
-            background: props.color
+            background: props.color,
           }}
           className="button-component primary"
         >

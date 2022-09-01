@@ -1,0 +1,12 @@
+.data-grid {
+    background-color: rgb(231, 243, 255);
+}
+.admin-content {
+    margin: 0 2rem;
+    width: auto !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+}

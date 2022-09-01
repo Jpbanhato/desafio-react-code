@@ -1,12 +1,15 @@
-
-import React from "react"
-import './Login.scss';
+import React, { useEffect } from "react";
+import "./Login.scss";
 import Button from "../components/Button";
 
 function Login() {
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
+
   return (
     <div className="Auth-form-container">
-      <form className="Auth-form">
+      <form action="/admin" className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Log in</h3>
           <div className="form-group-login mt-3">
@@ -14,22 +17,18 @@ function Login() {
             <input
               type="email"
               className="mt-1"
-              placeholder="Email"
+              placeholder="exemplo@gmail.com"
             />
           </div>
           <div className="form-group-login mt-3">
             <label className="label-class">Senha</label>
-            <input
-              type="password"
-              className="mt-1"
-              placeholder="Senha"
-            />
+            <input type="password" className="mt-1" placeholder="Senha" />
           </div>
-            <Button color="rgb(6, 34, 51)" />
+          <Button color="rgb(6, 34, 51)" />
         </div>
       </form>
     </div>
-  )
+  );
 }
 
 export default Login;
