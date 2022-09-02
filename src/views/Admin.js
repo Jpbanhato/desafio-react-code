@@ -1,7 +1,9 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";
+import Button from "../components/Button";
 import "./Admin.css";
+import CardInput from "../components/CardInput";
 
 function Admin() {
   useEffect(() => {
@@ -9,6 +11,8 @@ function Admin() {
   }, []);
 
   const [members, setMembers] = useState([]);
+  const [item, setItem] = useState([]);
+  const [exibirModal, setExibirModal] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3001/members")
@@ -20,6 +24,33 @@ function Admin() {
         console.log(error);
       });
   }, []);
+
+  // fetch("http://localhost:3001/members/1", {
+  //     method: "PUT",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         name: "Teste",
+  //         email: "
+  //         phone: "123456789",
+
+  //       }),
+  //       })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMembers(data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
+
+  const rows = members.map((member) => {
+    return {
+      ...member,
+    };
+  });
 
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
@@ -46,8 +77,6 @@ function Admin() {
       field: "cargo",
       headerName: "Cargo",
       width: 150,
-    //   valueGetter: (params) =>
-    //     `${params.row.firstName || ""} ${params.row.lastName || ""}`,
     },
     {
       field: "aniversario",
@@ -57,33 +86,49 @@ function Admin() {
     },
   ];
 
-//   const rows = [
-//     // members.map ((member) => (
-//     //     { id: member.id, nome: member.name, email: member.email, departamentos: member.departamentos, cargo: member.cargo, aniversario: member.aniversario }
-//     // ))
-//     // ];
-//     { id: 1, nome: "Nome", email: "email@gmail.com", departamentos: "depto", cargo: "cargo", aniversario: "01/01/2021" },
-//     { id: 2, nome: "Nome", email: "email@gmail.com", departamentos: "depto", cargo: "cargo", aniversario: "01/01/2021" },
-//     { id: 3, nome: "Nome", email: "email@gmail.com", departamentos: "depto", cargo: "cargo", aniversario: "01/01/2021" },
-//     { id: 4, nome: "Nome", email: "email@gmail.com", departamentos: "depto", cargo: "cargo", aniversario: "01/01/2021" },
-//     { id: 5, nome: "Nome", email: "email@gmail.com", departamentos: "depto", cargo: "cargo", aniversario: "01/01/2021" },
-//     { id: 6, nome: "Nome", email: "email@gmail.com", departamentos: "depto", cargo: "cargo", aniversario: "01/01/2021" },
-//   ];
-
   return (
-    <div className="admin-content">
-      <div className="data-grid" style={{ height: 300, width: "100%" }}>
-        <DataGrid
-          rows={members}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
-          checkboxSelection
-          disableSelectionOnClick
-          experimentalFeatures={{ newEditingApi: true }}
+    <>
+      <div className="admin-content">
+        <div className="data-grid" style={{ height: 300, width: "100%" }}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+            checkboxSelection
+            onSelectionModelChange={(newSelection) => {
+              setItem(newSelection);
+              console.log(item);
+            }}
+            selectionModel={item}
+            disableSelectionOnClick
+            experimentalFeatures={{ newEditingApi: true }}
+          />
+        </div>
+        <Button
+          name="Adicionar Novo"
+          color="rgb(26, 90, 153)"
+          onClick={() => {
+            setExibirModal(!exibirModal);
+          }}
         />
       </div>
-    </div>
+      <div className="card-div">
+        {exibirModal && (
+          <>
+            <CardInput
+              key={0}
+              nome={"Nome"}
+              email={"emailaaa"}
+              departamentos={["a", "b"]}
+              cargo={"cargou"}
+              aniversario={"niver<3"}
+              style={{ position: "absolute" }}
+            />
+          </>
+        )}
+      </div>
+    </>
   );
 }
 

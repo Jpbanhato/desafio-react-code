@@ -1,0 +1,25 @@
+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-card,
+textarea {
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 300;
+  background: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+.input-card,
+textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid aquamarine;
+}

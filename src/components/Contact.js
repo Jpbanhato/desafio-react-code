@@ -51,7 +51,7 @@ function Contact() {
           </div>
           <div className="col">
             <div className="form-group-contact right">
-              <Button />
+              <Button name="Enviar" />
             </div>
           </div>
         </form>

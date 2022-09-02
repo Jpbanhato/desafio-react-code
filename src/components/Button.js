@@ -5,12 +5,13 @@ function Button(props) {
     <>
       <div className="form-group-contact right">
         <button
+          onClick={props.onClick}
           style={{
             background: props.color,
           }}
           className="button-component primary"
         >
-          Send
+          {props.name}
         </button>
       </div>
     </>

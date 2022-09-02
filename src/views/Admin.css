@@ -10,3 +10,10 @@
     justify-content: center;
     height: 70vh;
 }
+.card-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 3rem 0;
+}

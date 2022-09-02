@@ -16,15 +16,15 @@ function Login() {
             <label className="label-class">Email</label>
             <input
               type="email"
-              className="mt-1"
+              className="input-login mt-1"
               placeholder="exemplo@gmail.com"
             />
           </div>
           <div className="form-group-login mt-3">
             <label className="label-class">Senha</label>
-            <input type="password" className="mt-1" placeholder="Senha" />
+            <input type="password" className="input-login mt-1" placeholder="Senha" />
           </div>
-          <Button color="rgb(6, 34, 51)" />
+          <Button name="Logar" color="rgb(6, 34, 51)" />
         </div>
       </form>
     </div>

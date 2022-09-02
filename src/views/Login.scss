@@ -35,8 +35,7 @@
   color: rgb(34, 34, 34);
 }
 
-input[type="text"],
-input[type="email"],
+.input-login,
 textarea {
   border: none;
   cursor: pointer;
@@ -48,8 +47,7 @@ textarea {
   border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   transition: all 0.3s ease-in-out;
 }
-input[type="text"],
-input[type="email"],
+.input-login,
 textarea:focus {
   border: none;
   outline: none;
